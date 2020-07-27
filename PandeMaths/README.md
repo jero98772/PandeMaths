@@ -9,23 +9,11 @@
 
 #### Installing:
 
- This tool runs on many platforms and it requires Python (3.x.y) and the following libraries
-
-	matplotlib.pyplot - show a chart about variables and their behavior
-	Flask - allows to reproduce an interface on a web
- Install in  systems such as: Kali, Ubuntu, ArchLinux, ParrotSec, Fedora, etc... also run:
-
-	pip install Flask
-	pip install matplotlib
-####  Source libs:
-
-   * Python: https://www.python.org/downloads/
-   * matplotlib: https://matplotlib.org/
-   * Flask: https://pypi.org/project/Flask/ 
+ This tool runs on many platforms and it requires Python (3.x.y).
 
 #### Executing:
   
-  python app.py (or python3 pandemaths.py)
+  python pandemaths.py (or python3 pandemaths.py)
 
 ----------
 

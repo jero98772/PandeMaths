@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<style type="text/css">
+.tab {
+        tab-size: 5;
+    }
+</style>
+
+	<title>PandeMaths</title>
+<meta charset="UTF-8"> 
+</head>
+<body>
+
+<form method="post" action="/out" enctype="multipart/form-data">
+<center>
+<h1>PandeMaths</h1>
+<h3>by psy</h3>
+</center>
+
+<center>
+<table>
+	<tr>
+		
+ <th>total population*</th>
+ <th>infected starting*</th>
+ <th>days*</th>
+ <th>daily rate interaction*</th>
+	</tr>
+	<tr>	
+ <th><input type="text" name="total_population" value="100000"required  >   </th>
+ <th><input type="text" name="infected_starting" value="1" required >   </th>
+ <th><input type="text" name="days" value="200"  >   </th>
+ <th><input type="text" name="daily_rate_interaction" value="2.5"required  >   </th>
+	</tr>
+</table>
+<table>
+	<th>
+<p>template</p>
+<select name ="template" value="load template">
+		<option>load template</option>
+		<option>new simulation</option>
+</select>
+</th>
+<th>
+<p>chose template<p></p> 
+<input type="text" name="template_set" value="1"> 
+</th>
+</table>
+<table>
+	<tr>
+ <th>average rate duration </th>
+ <th>probability of contagion </th>
+ <th>recovery rate </th>
+	</tr>
+	<tr>
+ <th><input type="text" name="average_rate_duration" value="12"  >  <br> </th>
+ <th><input type="text" name="probability_of_contagion" value="14"  >  <br> </th>
+ <th><input type="text" name="recovery_rate" value="95"  >  <br> </th>
+	</tr>
+</table>
+<button type="summit ">summit </button>
+<br>
+<p><b>chose template</b></p>
+<p>  [1] - Zika</p>
+<p>  [2] - Varicella</p>
+<p>  [3] - Tuberculosis</p>
+<p>  [4] - SARS-COV</p>
+<p>  [5] - SARS-COV-2</p>
+<p>  [6] - Rabies</p>
+<p>  [7] - Malaria</p>
+<p>  [8] - MERS-COV</p>
+<p>  [9] - Influenza</p>
+<p>  [10] - Hepatitis A</p>
+<p>  [11] - Hantavirus</p>
+<p>  [12] - Ebola</p>
+<p>  [13] - Dengue</p>
+<p>  [14] - Anthrax</p>
+<p>  [15] - AIDS-HIV</p>
+</center>
+</form>
+</body>
+</html>
+
+
