@@ -1,26 +1,28 @@
 from flask import Flask, render_template ,request
 from PandeMaths.pandemaths import new_simulation ,load_template
-import os
+import os , sys
 app = Flask(__name__)
 def deletefiles():
-	if os.path.isfile("PandeMaths-report.json"):
+	if os.path.isfile("static/reports/PandeMaths-report/PandeMaths-report.txt")  or os.path.isfile("static/reports/PandeMaths-report/PandeMaths-report.json") or os.path.isfile("static/reports/PandeMaths-report/PandeMaths-report.png") :			
 		os.remove("static/reports/PandeMaths-report/PandeMaths-report.json")
-	if os.path.isfile("PandeMaths-report.txt"):
 		os.remove("static/reports/PandeMaths-report/PandeMaths-report.txt")
-	if os.path.isfile("PandeMaths-report.png"):
 		os.remove("static/reports/PandeMaths-report/PandeMaths-report.png")
+	#if os.path.isdir("static/reports/PandeMaths-report") :
+	#	os.path.remove("static/reports/PandeMaths-report")
+	#if os.path.isdir("static/reports") :
+	#	os.path.remove("static/reports")
 @app.route("/",methods=['GET','POST'])
 def index():
 	deletefiles()
 	if request.method == 'POST':
-		total_population = int(request.form['total_population'])#1
-		infected_starting = int(request.form['infected_starting'])#2
-		days = int(request.form['days'])#3
-		daily_rate_interaction = float(request.form['daily_rate_interaction'])#4
-		average_rate_duration = int(request.form['average_rate_duration'])#6
-		probability_of_contagion = int(request.form['probability_of_contagion'])#7
-		recovery_rate = int(request.form['recovery_rate'])#8
-		starting_population = total_population#9
+		total_population = int(request.form['total_population'])
+		infected_starting = int(request.form['infected_starting'])
+		days = int(request.form['days'])
+		daily_rate_interaction = float(request.form['daily_rate_interaction'])
+		average_rate_duration = int(request.form['average_rate_duration'])
+		probability_of_contagion = int(request.form['probability_of_contagion'])
+		recovery_rate = int(request.form['recovery_rate'])
+		starting_population = total_population
 		template = request.form['template']
 		template_set = request.form['template_set']
 		if template == "load template":
